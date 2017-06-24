@@ -127,11 +127,13 @@
 }
 
    #about{
-      background-image:url(../img/LrUoF.jpg);
-      background-repeat: no-repeat;
-      background-position:center;
-      height: 500px;
-      width: 1500px;
+      background:url(../img/LrUoF.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
    }
 
    header 
