@@ -142,7 +142,68 @@
                         <p class="text-muted">Graphic Design</p>
                     </div>
                 </div>
-                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
+                <!-- Table responsive to scroll horizontally on small devices -->
+    <div class="table-responsive">
+        <!-- Row 1: Column Headings -->
+        <div class="row">
+        <div class="col-lg-12">
+        <!-- Train schedule to be populated by user input -->
+        <!-- Panel with title -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <p class="panel-title"><strong>Breweries Visited</strong></p>
+            </div>
+            <!-- Panel body via a table -->
+            <div class="panel-body">
+                <table class="table bordered" id="train-table">
+                        <!-- Table content -->
+                        <thead>
+                            <!-- Defining the row -->
+                            <tr>
+                                <!--Header content -->
+                                <th>Train</th>
+                                <th>Destination</th>
+                                <th>How Often</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                        </thead>
+                    <tbody>
+                    </tbody>    
+                </table>    
+            <!-- Panel body ends -->
+            </div>  
+        <!-- Primary panel ends -->
+        </div>
+            
+        <!--Add a brewery -->
+        <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <p class="panel-title"><strong>Add Brewery</strong></p>
+                </div>
+                <!-- Panel body via a table -->
+                <div class="panel-body">
+                <!-- Entry Form containing two element inputs -->
+                <form id="brewery-form">
+                    <!-- First element input: Brewery Name -->
+                    <div class="form-group">
+                        <label for="train-name-input">Brewery Name</label>
+                        <input class="form-control" id="brewery-name-input" type="text">
+                    </div>
+                    <!-- Second element input: Comments -->
+                    <div class="form-group">
+                        <label for="comments-input">Comments</label>
+                        <input class="form-control" id="comments-input" type="text">
+                    </div>
+                    <!-- Submit button -->
+                    <button class="btn btn-success" id="add-brewery-btn" type="submit">Add Brewery</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    <!-- table responsive ends -->
+    </div>  
+    <!-- <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
