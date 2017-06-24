@@ -126,6 +126,16 @@
 	text-align:center;color:#fff
 }
 
+   #about{
+      background:url(../img/LrUoF.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+   }
+
    header 
    .intro-text{padding-top:100px;padding-bottom:50px}
    header .intro-text .intro-lead-in{font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic;font-size:22px;line-height:22px;margin-bottom:25px}header 
