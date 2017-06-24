@@ -18,7 +18,7 @@
    .btn-primary,
    .btn-xl,h1,h2,h3,h4,h5,h6{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700}
    
-   .text-muted{color:#777}
+   .text-muted{color:#000}
    .text-primary,a{color:#fed136}p{font-size:14px;line-height:1.75}p
    .large{font-size:16px}a,a.active,a:active,a:focus,a:hover{outline:0}a
    .active,a:active,a:focus,a:hover{color:#fec503}
@@ -180,3 +180,7 @@
    .portfolio-modal .close-modal .lr{height:75px;width:1px;margin-left:35px;background-color:#222;transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);z-index:1051}
    .portfolio-modal .close-modal .lr .rl{height:75px;width:1px;background-color:#222;transform:rotate(90deg);-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);z-index:1052}
    .portfolio-modal .modal-backdrop{opacity:0;display:none}::-moz-selection{text-shadow:none;background:#fed136}::selection{text-shadow:none;background:#fed136}img::selection{background:0 0}img::-moz-selection{background:0 0}
+   #map {
+      height: 400px;
+      width: 100%;
+   }
