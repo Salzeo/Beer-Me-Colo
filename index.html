@@ -53,6 +53,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
+    <!-- Firebase link -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 
 </head>
 
@@ -99,7 +101,7 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome to:</div>
-                <div class="intro-heading">Colorado Beer Me</div>
+                <div class="intro-heading">Beer Me Colorado</div>
                 <a href="#portfolioModal1" class="btn btn-xl" data-toggle="modal">Login</a>
                 <a href="#services" class="page-scroll btn btn-xl">Find Beer Now!</a>
             </div>
@@ -480,10 +482,10 @@
                                   <div class="wrapper">
                                     <form class="form-signin">       
                                         <h2 class="form-signin-heading">Please login</h2>
-                                        <input type="text" class="form-control" name="name" placeholder="Johnny Hopkins" required=""/>
-                                        <input type="tel" class="form-control" name="phone-number"   placeholder="123-456-7890" required="" autofocus="" />  
+                                        <input type="text" class="form-control" id="name" placeholder="Johnny Hopkins" required=""/>
+                                        <input type="tel" class="form-control" id="phone-number"   placeholder="123-456-7890" required="" autofocus="" />  
                                         <br>    
-                                        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+                                        <button class="btn btn-lg btn-primary btn-block login" type="submit">Login</button>   
                                     </form>
                                   </div>
                                 <br>
