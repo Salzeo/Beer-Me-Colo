@@ -44,6 +44,7 @@
 
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
+    <!-- <link ref="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/readable/bootstrap.min.css"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -123,138 +124,70 @@
         </div>
     </section>
 
-    <!-- Your Reviews Section -->
+    <!-- Your Reviews Section with 'portfolio' ids and classes-->
+    <!-- Brewery data to be populated by user input -->
     <section id="portfolio" class="bg-light-gray">
         <div class="container">
+            <!-- Row 1: Section heading and subheading -->
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Your Full Review List</h2>
                     <h3 class="section-subheading text-muted">Beer snob: One who refuses to drink crap beer.</h3>
                 </div>
             </div>
-            <div class="row">
-            <!-- Table responsive to scroll horizontally on small devices -->
-            <div class="table-responsive">
-                <!-- Row 1: Column Headings -->
-                <div class="row">
+            <!--Table -->
+            <!-- Row 2: Title -->
+            <!-- <div class="row" class="table-responsive">
                 <div class="col-lg-12">
-                <!-- Brewery data to be populated by user input -->
-                <!-- Panel with title -->
-                <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <p class="panel-title"><strong>Breweries Reviewed</strong></p>
-                </div>
-                <!-- Panel body via a table -->
-                <div class="panel-body">
-                    <div class="row">                      
-                            <div class="col-md-2" id="brewery-data"><strong>Brewery</strong></div>
-                            <div class="col-md-2" id="date-data"><strong>Date</strong></div>
-                            <div class="col-md-8" id="comments-data"><strong>Comments</strong></div>    
-                    </div>    
-                <!-- Panel body ends -->
-                </div>  
-            <!-- Primary panel ends -->
-            </div>
-            
-        <!--Add a brewery -->
-        <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <p class="panel-title"><strong>Add Review</strong></p>
-                </div>
-                <!-- Panel body via a table -->
-                <div class="panel-body">
-                <!-- Entry Form containing two element inputs -->
-                <form id="brewery-form">
-                    <!-- First element input: Brewery Name -->
-                    <div class="form-group">
-                        <label for="train-name-input">Brewery Name</label>
-                        <input class="form-control" id="brewery-name-input" type="text">
-                    </div>
-                    <!-- Second element input: Comments -->
-                    <div class="form-group">
-                        <label for="comments-input">Comments</label>
-                        <input class="form-control" id="comments-input" type="text">
-                    </div>
-                    <!-- Submit button -->
-                    <button class="btn btn-success" id="add-brewery-btn" type="submit">Add Brewery</button>
-                </form>
-                </div>
-            </div>
-        </div>
-    <!-- table responsive ends -->
-    </div>  
-    <!-- <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
+                    <!-- Panel with title -->
+                   <!--  <div class="panel"> -->
+                    <!-- <div class="panel-heading">
+                        <p class="panel-title">Breweries Reviewed</p>
                     </div>
                 </div> -->
-                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
+                    <!-- Panel body via a table -->
+                   <!--  <div class="panel-body">
+                        <div class="row">                      
+                            <div class="col-md-2" id="date-data">Date</div>
+                            <div class="col-md-2" id="brewery-data">Brewery</div>
+                            <div class="col-md-8" id="comments-data">Comments</div>    
+                        </div>     -->
+                    <!-- Panel body ends -->
+                  <!--   </div>   -->
+                <!-- Primary panel ends -->
+              <!--   </div> -->
+          
+            <!--Add a brewery -->
+            <!-- Extras: Format form, Drop-down rating, link to brewery website -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <p class="panel-title">Add Brewery</p>
+                </div>
+                <div class="panel-body">
+                    <!-- Entry Form containing three element inputs -->
+                    <form id="brewery-form">
+                        <!-- First element input: Date -->
+                        <div class="form-group">
+                            <label for="date-input">Date (DD/MM/YY)</label>
+                            <input class="form-control" id="date-input" type="text">
+                        </div><div class="form-group">
+                            <label for="brewery-name-input">Brewery Name</label>
+                            <input class="form-control" id="brewery-name-input" type="text">
                         </div>
-                        <img src="img/portfolio/golden.png" class="img-responsive" alt="">
-                    </a> -->
-                    <!-- <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
+                        <!-- Second element input: Comments -->
+                        <div class="form-group">
+                            <label for="comments-input">Comments</label>
+                            <input class="form-control" id="comments-input" type="text">
+                        </div>
+                        <!-- Submit button -->
+                        <button class="btn text-primary panel-heading" id="add-brewery-btn" type="submit">Save Brewery</button>
+                    </form>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/escape.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div> -->
-                <!-- </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div> -->
             </div>
-        </div>
+            <!-- table responsive ends -->
+            </div> 
+        </div> 
     </section>
 
     <!-- About Section -->

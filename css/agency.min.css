@@ -136,6 +136,27 @@
       width: 100%;
    }
 
+   .panel-heading {
+      -webkit-background-image: url(../img/portfolio/dark-triangles.png);
+      -moz-background-image: url(../img/portfolio/dark-triangles.png);
+      -ms-background-image: url(../img/portfolio/dark-triangles.png);
+      -o-background-image: url(../img/portfolio/dark-triangles.png);
+      background-image: url(../img/portfolio/dark-triangles.png);
+   }
+   
+   .panel-title {
+      -webkit-color: #fed136;
+      -moz-color: #fed136;
+      -ms-color: #fed136;
+      -o-color: #fed136;
+      color: #777777;
+      font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   }
+
+   #add-brewery-btn {
+      font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+      font-size: 16px;
+   }
    header 
    .intro-text{padding-top:100px;padding-bottom:50px}
    header .intro-text .intro-lead-in{font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic;font-size:22px;line-height:22px;margin-bottom:25px}header 
@@ -143,9 +164,12 @@
    {header .intro-text{padding-top:300px;padding-bottom:200px}header 
    .intro-text .intro-lead-in{font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic;font-size:40px;line-height:40px;margin-bottom:25px}
    header .intro-text .intro-heading{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:75px;line-height:75px;margin-bottom:50px}}
+   
+   
    #portfolio .portfolio-item .portfolio-caption p,section h3.section-subheading{font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic}section{padding:100px 0}section h2
+
    .section-heading{font-size:40px;margin-top:0;margin-bottom:15px}section h3
-   .section-subheading{font-size:16px;text-transform:none;font-weight:400;margin-bottom:75px}@media (min-width:768px){section{padding:150px 0}}
+   .section-subheading{font-size:12px;text-transform:none;font-weight:400;margin-bottom:75px}@media (min-width:768px){section{padding:150px 0}}
    .service-heading{margin:15px 0;text-transform:none}
    #portfolio .portfolio-item{margin:0 0 15px;right:0}
    #portfolio .portfolio-item .portfolio-link{display:block;position:relative;max-width:400px;margin:0 auto}
