@@ -158,26 +158,15 @@
         <!-- Panel with title -->
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <p class="panel-title"><strong>Breweries Visited</strong></p>
+                <p class="panel-title"><strong>Breweries Reviewed</strong></p>
             </div>
             <!-- Panel body via a table -->
             <div class="panel-body">
-                <table class="table bordered" id="train-table">
-                        <!-- Table content -->
-                        <thead>
-                            <!-- Defining the row -->
-                            <tr>
-                                <!--Header content -->
-                                <th>Train</th>
-                                <th>Destination</th>
-                                <th>How Often</th>
-                                <th>Next Arrival</th>
-                                <th>Minutes Away</th>
-                            </tr>
-                        </thead>
-                    <tbody>
-                    </tbody>    
-                </table>    
+                <div class="row">                      
+                        <div class="col-md-2" id="brewery-data"><strong>Brewery</strong></div>
+                        <div class="col-md-2" id="date-data"><strong>Date</strong></div>
+                        <div class="col-md-8" id="comments-data"><strong>Comments</strong></div>    
+                </div>    
             <!-- Panel body ends -->
             </div>  
         <!-- Primary panel ends -->
@@ -186,7 +175,7 @@
         <!--Add a brewery -->
         <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <p class="panel-title"><strong>Add Brewery</strong></p>
+                    <p class="panel-title"><strong>Add Review</strong></p>
                 </div>
                 <!-- Panel body via a table -->
                 <div class="panel-body">
