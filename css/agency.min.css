@@ -136,27 +136,41 @@
       width: 100%;
    }
 
-   .panel-heading {
-      -webkit-background-image: url(../img/portfolio/dark-triangles.png);
-      -moz-background-image: url(../img/portfolio/dark-triangles.png);
-      -ms-background-image: url(../img/portfolio/dark-triangles.png);
-      -o-background-image: url(../img/portfolio/dark-triangles.png);
-      background-image: url(../img/portfolio/dark-triangles.png);
-   }
    
-   .panel-title {
-      -webkit-color: #fed136;
-      -moz-color: #fed136;
-      -ms-color: #fed136;
-      -o-color: #fed136;
-      color: #777777;
-      font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
-   }
+.section-subheading {
+    color: #777777;
+}
 
-   #add-brewery-btn {
-      font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
-      font-size: 16px;
-   }
+.panel-heading {
+   -webkit-background-image: url(../img/portfolio/dark-triangles.png);
+   -moz-background-image: url(../img/portfolio/dark-triangles.png);
+   -ms-background-image: url(../img/portfolio/dark-triangles.png);
+   -o-background-image: url(../img/portfolio/dark-triangles.png);
+   background-image: url(../img/portfolio/dark-triangles.png);
+}
+   
+.panel-title {
+   -webkit-color: white;
+   -moz-color: white;
+   -ms-color: white;
+   -o-color: white;
+   color: white;
+   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+.btn-add-brewery {
+   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-size: 16px;
+}
+
+.form-group {
+   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+.form-control:focus {
+   background-color: #f3eba5;
+   border: 1px solid #eadd61;
+}
+
    header 
    .intro-text{padding-top:100px;padding-bottom:50px}
    header .intro-text .intro-lead-in{font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic;font-size:22px;line-height:22px;margin-bottom:25px}header 

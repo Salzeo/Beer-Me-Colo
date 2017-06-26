@@ -125,40 +125,47 @@
     </section>
 
     <!-- Your Reviews Section with 'portfolio' ids and classes-->
-    <!-- Brewery data to be populated by user input -->
+    <!-- Table data to be populated by user input -->
     <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <!-- Row 1: Section heading and subheading -->
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Your Full Review List</h2>
-                    <h3 class="section-subheading text-muted">Beer snob: One who refuses to drink crap beer.</h3>
+                    <h3 class="section-subheading">Beer snob: One who refuses to drink crap beer.</h3>
                 </div>
             </div>
-            <!--Table -->
-            <!-- Row 2: Title -->
-            <!-- <div class="row" class="table-responsive">
-                <div class="col-lg-12">
-                    <!-- Panel with title -->
-                   <!--  <div class="panel"> -->
-                    <!-- <div class="panel-heading">
-                        <p class="panel-title">Breweries Reviewed</p>
-                    </div>
-                </div> -->
-                    <!-- Panel body via a table -->
-                   <!--  <div class="panel-body">
-                        <div class="row">                      
-                            <div class="col-md-2" id="date-data">Date</div>
-                            <div class="col-md-2" id="brewery-data">Brewery</div>
-                            <div class="col-md-8" id="comments-data">Comments</div>    
-                        </div>     -->
+            <!-- Table -->
+            <div class="table-responsive">
+                 <!-- Row 2: Panel heading -->
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <p class="panel-title">Breweries Reviewed</p>
+                            </div>
+                        </div>
+                    </div>               
+                    <div class="panel-body">
+                        <table class="table bordered form-group" id="brewery table">
+                            <thead>
+                                <tr>
+                                    <!-- Headings -->
+                                    <th>Date Visited</th>
+                                    <th>Brewery Name</th>
+                                    <th>Comments</th>
+                                </tr>
+                            </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                     <!-- Panel body ends -->
-                  <!--   </div>   -->
+                    </div>  
                 <!-- Primary panel ends -->
-              <!--   </div> -->
-          
+                </div>
+            
             <!--Add a brewery -->
-            <!-- Extras: Format form, Drop-down rating, link to brewery website -->
+            <!-- Extras: Format form, Drop-down rating, Link to brewery website -->
             <div class="panel">
                 <div class="panel-heading">
                     <p class="panel-title">Add Brewery</p>
@@ -170,23 +177,23 @@
                         <div class="form-group">
                             <label for="date-input">Date (DD/MM/YY)</label>
                             <input class="form-control" id="date-input" type="text">
-                        </div><div class="form-group">
+                         <!-- Second element input: Brewery name -->
+                         </div><div class="form-group">
                             <label for="brewery-name-input">Brewery Name</label>
                             <input class="form-control" id="brewery-name-input" type="text">
                         </div>
-                        <!-- Second element input: Comments -->
+                        <!-- Third element input: Comments -->
                         <div class="form-group">
                             <label for="comments-input">Comments</label>
                             <input class="form-control" id="comments-input" type="text">
                         </div>
                         <!-- Submit button -->
-                        <button class="btn text-primary panel-heading" id="add-brewery-btn" type="submit">Save Brewery</button>
+                        <button class="btn btn-add-brewery panel-heading text-primary"  type="submit">Save Brewery</button>
                     </form>
                     </div>
                 </div>
             </div>
-            <!-- table responsive ends -->
-            </div> 
+         <!-- container ends -->  
         </div> 
     </section>
 
@@ -312,50 +319,13 @@
         </div>
     </section>
 
-    <!-- Clients Aside -->
-    <aside class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </aside>
-
-    <footer>
+   <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <span class="copyright">Copyright &copy; Rolling Steins 2017</span>
                 </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
+                
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
                         <li><a href="#">Privacy Policy</a>
