@@ -1,6 +1,5 @@
 <!-- Phase 1 -->
-    <!-- Add a form with one input field and one submit button -->   <!-- Add a Skip Login, Find My Beer button -->
-    <!-- Add an About Us button and data -->
+    <!-- Add a Skip Login, Find My Beer button -->
     <!-- Add a Disclaimer button and data -->
     <!-- Add an Uber button and link -->
 <!-- Phase 2 --> 
@@ -15,7 +14,6 @@
     <!-- Add menu branching to include -->
         <!-- Name and location of brewery -->
         <!-- Brewery data -->
-        <!-- Yelp data -->
     <!-- If the user logged in, display his first two or three previously rated breweries/beers, and -->
         <!-- link those items to all of the user's stored data via table format, and -->
         <!-- create a form with element inputs tdb -->
@@ -135,42 +133,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
-                    </div>
+            <!-- Table responsive to scroll horizontally on small devices -->
+            <div class="table-responsive">
+                <!-- Row 1: Column Headings -->
+                <div class="row">
+                <div class="col-lg-12">
+                <!-- Brewery data to be populated by user input -->
+                <!-- Panel with title -->
+                <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <p class="panel-title"><strong>Breweries Reviewed</strong></p>
                 </div>
-                <!-- Table responsive to scroll horizontally on small devices -->
-    <div class="table-responsive">
-        <!-- Row 1: Column Headings -->
-        <div class="row">
-        <div class="col-lg-12">
-        <!-- Train schedule to be populated by user input -->
-        <!-- Panel with title -->
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <p class="panel-title"><strong>Breweries Reviewed</strong></p>
+                <!-- Panel body via a table -->
+                <div class="panel-body">
+                    <div class="row">                      
+                            <div class="col-md-2" id="brewery-data"><strong>Brewery</strong></div>
+                            <div class="col-md-2" id="date-data"><strong>Date</strong></div>
+                            <div class="col-md-8" id="comments-data"><strong>Comments</strong></div>    
+                    </div>    
+                <!-- Panel body ends -->
+                </div>  
+            <!-- Primary panel ends -->
             </div>
-            <!-- Panel body via a table -->
-            <div class="panel-body">
-                <div class="row">                      
-                        <div class="col-md-2" id="brewery-data"><strong>Brewery</strong></div>
-                        <div class="col-md-2" id="date-data"><strong>Date</strong></div>
-                        <div class="col-md-8" id="comments-data"><strong>Comments</strong></div>    
-                </div>    
-            <!-- Panel body ends -->
-            </div>  
-        <!-- Primary panel ends -->
-        </div>
             
         <!--Add a brewery -->
         <div class="panel panel-primary">
@@ -427,7 +411,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2016</span>
+                    <span class="copyright">Copyright &copy; Rolling Steins 2017</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
