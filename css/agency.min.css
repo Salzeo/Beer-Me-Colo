@@ -113,7 +113,10 @@
    .navbar-custom .navbar-nav>.active>a{border-radius:3px}
    .navbar-custom.affix{background-color:#222;padding:10px 0}
    .navbar-custom.affix .navbar-brand{font-size:1.5em}}
-   
+  a:link {
+   color:black
+  }
+
    header{
    	background-image:url(../img/beer_ears_glasses_barrel_70671_602x339.png);
    	background-repeat:no-repeat;
