@@ -1,6 +1,5 @@
 <!-- Phase 1 -->
-    <!-- Add a form with one input field and one submit button -->   <!-- Add a Skip Login, Find My Beer button -->
-    <!-- Add an About Us button and data -->
+    <!-- Add a Skip Login, Find My Beer button -->
     <!-- Add a Disclaimer button and data -->
     <!-- Add an Uber button and link -->
 <!-- Phase 2 --> 
@@ -15,7 +14,6 @@
     <!-- Add menu branching to include -->
         <!-- Name and location of brewery -->
         <!-- Brewery data -->
-        <!-- Yelp data -->
     <!-- If the user logged in, display his first two or three previously rated breweries/beers, and -->
         <!-- link those items to all of the user's stored data via table format, and -->
         <!-- create a form with element inputs tdb -->
@@ -46,6 +44,7 @@
 
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
+    <!-- <link ref="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/readable/bootstrap.min.css"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,6 +52,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
+    <!-- Firebase link -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 
 </head>
 
@@ -99,7 +100,7 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome to:</div>
-                <div class="intro-heading">Colorado Beer Me</div>
+                <div class="intro-heading">Beer Me Colorado</div>
                 <a href="#portfolioModal1" class="btn btn-xl" data-toggle="modal">Login</a>
                 <a href="#services" class="page-scroll btn btn-xl">Find Beer Now!</a>
             </div>
@@ -112,108 +113,86 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Beer Map</h2>
-                    <img src="map-image.png"/>
+                </div>
+            </div>
+            <div class="row">
+                <div id="form" class="col-lg-4">
+                </div>
+                <div id="map" class="col-lg-8">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Your Reviews Section -->
+    <!-- Your Reviews Section with 'portfolio' ids and classes-->
+    <!-- Table data to be populated by user input -->
     <section id="portfolio" class="bg-light-gray">
         <div class="container">
+            <!-- Row 1: Section heading and subheading -->
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Your Full Review List</h2>
-                    <h3 class="section-subheading text-muted">Beer snob: One who refuses to drink crap beer.</h3>
+                    <h3 class="section-subheading">Beer snob: One who refuses to drink crap beer.</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+            <!-- Table -->
+            <div class="table-responsive">
+                 <!-- Row 2: Panel title -->
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <p class="panel-title">Breweries Reviewed</p>
                             </div>
+                    <div class="panel-body">
+                        <table class="table bordered form-group" id="brewery table">
+                            <thead>
+                                <tr>
+                                    <!-- Tabel headings -->
+                                    <th>Date Visited</th>
+                                    <th>Brewery Name</th>
+                                    <th>Comments</th>
+                                </tr>
+                            </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <!-- Panel body ends -->
+                    </div>  
+                <!-- Primary panel ends -->
+                </div>
+            
+            <!-- Add a brewery -->
+            <!-- Extras: Format form, Drop-down rating, Link to brewery website -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <p class="panel-title">Add Brewery</p>
+                </div>
+                <div class="panel-body">
+                    <!-- Entry Form containing three element inputs -->
+                    <form id="brewery-form">
+                        <!-- First element input: Date -->
+                        <div class="form-group">
+                            <label for="date-input">Date (DD/MM/YY)</label>
+                            <input class="form-control" id="date-input" type="text">
+                         <!-- Second element input: Brewery name -->
+                         </div><div class="form-group">
+                            <label for="brewery-name-input">Brewery Name</label>
+                            <input class="form-control" id="brewery-name-input" type="text">
                         </div>
-                        <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
+                        <!-- Third element input: Comments -->
+                        <div class="form-group">
+                            <label for="comments-input">Comments</label>
+                            <input class="form-control" id="comments-input" type="text">
+                        </div>
+                        <!-- Submit button -->
+                        <button class="btn btn-add-brewery panel-heading text-primary" id="add-brewery-btn" type="submit">Save Brewery</button>
+                    </form>
                     </div>
                 </div>
-               <!--  <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div> -->
-                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div> -->
-               <!--  <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/golden.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div> -->
-               <!--  <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/escape.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div> -->
-               <!--  <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div> -->
             </div>
-        </div>
+         <!-- container ends -->  
+        </div> 
     </section>
 
     <!-- About Section -->
@@ -236,6 +215,24 @@
                                 <div class="timeline-heading">
                                     <h4>2017</h4>
                                     <h4 class="subheading">The Beer Me Project</h4>
+                                    <h4 class="subheading"> From a dream, to a team</h4>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/black11.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>100000000</h4>
+                                    <h4 class="subheading">The End?</h4>
+                                    <h4 class="subheading"> From nothing to nothing</h4>
                                 </div>
                             </div>
                         </li>
@@ -337,50 +334,13 @@
         </div>
     </section>
 
-    <!-- Clients Aside -->
-    <aside class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </aside>
-
-    <footer>
+   <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2016</span>
+                    <span class="copyright">Copyright &copy; Rolling Steins 2017</span>
                 </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
+                
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
                         <li><a href="#">Privacy Policy</a>
@@ -410,19 +370,17 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <p>
-                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
-                                <ul class="list-inline">
-                                    <li>Date: July 2014</li>
-                                    <li>Client: Round Icons</li>
-                                    <li>Category: Graphic Design</li>
-                                </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                  <div class="wrapper">
+                                    <form class="form-signin">       
+                                        <h2 class="form-signin-heading">Please login</h2>
+                                        <input type="text" class="form-control" id="name" placeholder="Johnny Hopkins" required=""/>
+                                        <input type="tel" class="form-control" id="phone-number"   placeholder="123-456-7890" required="" autofocus="" />  
+                                        <br>    
+                                        <button id="login" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+                                    </form>
+                                  </div>
+                                <br>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Nevermind..</button>
                             </div>
                         </div>
                     </div>
@@ -590,6 +548,11 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+
+    <script src="js/searchtest.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzv6_hzw87dgf9atP_8y6Xm82jfAjDUaA&libraries=places&callback=initMap"></script>
+
 
 </body>
 
