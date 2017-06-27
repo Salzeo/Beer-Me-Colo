@@ -170,10 +170,15 @@
    font-size: 16px;
 }
 
+.field-length {
+ width: 25%;
+ /*margin: auto;*/
+}
 
 .form-group {
    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
+
 .form-control:focus {
    background-color: #f3eba5;
    border: 1px solid #eadd61;
