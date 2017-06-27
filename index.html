@@ -110,16 +110,28 @@
     <section id="services">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Beer Map</h2>
-                </div>
+               <!--  <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Find My Beer</h2>
+                </div> -->
             </div>
             <div class="row">
+                <form id="map-form">
+                        <!-- First element input: City -->
+                        <div class="form-group">
+                            <label for="city-input">City</label>
+                            <input class="form-control" id="city-input" type="text">
+                         <!-- Second element input: Brewery name -->
+                         </div><div class="form-group">
+                            <label for="state-input">State</label>
+                            <input class="form-control" id="state-input" type="text">
+                        </div>
+                        <button class="btn btn-search-map panel-heading text-primary" id="search-map-btn" type="submit">Search</button>
+                </form>
                 <div id="form" class="col-lg-4">
                 </div>
                 <div id="map" class="col-lg-8">
                 </div>
-                <button class="btn btn-search-map panel-heading text-primary" id="search-map-btn" type="submit">Search</button>
+
             </div>
         </div>
     </section>
