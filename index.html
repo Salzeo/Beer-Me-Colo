@@ -58,6 +58,9 @@
 </head>
 
 <body id="page-top" class="index">
+    
+    <!-- Go To Top Button -->
+    <button onclick="topFunction()" id="goToTop" title="Go to top">Top</button>
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -186,6 +189,11 @@
                         <div class="field-length" class="form-group">
                             <label for="date-input">Date</label>
                             <input class="form-control" id="date-input" type="text">
+                        <div class="form-group">
+                            <label for="date-input">Date (DD/MM/YY)</label>
+                            <input class="form-control" id="date-input" type="number">
+                         <!-- Second element input: Brewery name -->
+                         </div><div class="form-group">
                             <label for="brewery-name-input">Brewery Name</label>
                             <input class="form-control" id="brewery-name-input" type="text">
                         </div>
@@ -263,92 +271,67 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Team</h2>
+                    <h1 class="section-heading">Team</h1>
                  </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+              <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/1.png" class="img-responsive img-circle" alt="">
-                        <h4>Andres Medina</h4>
-                        <p class="text-muted">Lead Guitarist</p>
+                        <img src="img/team/5.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Tony Wahula</h4>
+                        <p class="text-muted">Lead Beer Enthuiast</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
+                            <li><a href="#"><i class="fa fa-github"></i></a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
                         <img src="img/team/6.png" class="img-responsive img-circle" alt="">
-                        <h4>Amy</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
+                        <h4>Amy Volkert</h4>
+                        <p class="text-muted">Advocate of many Beers & Pets</p>
+                       <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-github"></i></a>
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Dave</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+         
                <div class="col-sm-4">
                     <div class="team-member">
                         <img src="img/team/4.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Sally</h4>
-                        <p class="text-muted">Lead Guitarist</p>
+                        <h4>Sally Bradfield</h4>
+                        <p class="text-muted">Beer & Cat Enthusiast</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
+                            <li><a href="#"><i class="fa fa-github"></i></a>
                         </ul>
                     </div>
                 </div>
-               <div class="col-sm-4">
+                <div class="col-sm-6">
                     <div class="team-member">
-                        <img src="img/team/5.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Tony</h4>
-                        <p class="text-muted">Lead Guitarist</p>
+                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Dave Gray</h4>
+                        <p class="text-muted">Beer Enthusiast</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="#"><i class="fa fa-github"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
+                        
                         </ul>
                     </div>
-                </div>                                
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
                 </div>
+                
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="img/team/1.png" class="img-responsive img-circle" alt="">
+                        <h4>Andres Medina</h4>
+                        <p class="text-muted">Lead Guitarist</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-github"></i></a>
+                        </ul>
+                    </div>
+                </div>
+                                        
             </div>
-        </div>
+         </div>
     </section>
 
    <footer>
@@ -360,9 +343,9 @@
                 
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
+                        <li><a href="#">Legal Disclosures</a>
                         </li>
-                        <li><a href="#">Terms of Use</a>
+                        <li><a href="#">Please Drink Responsibly</a>
                         </li>
                     </ul>
                 </div>
