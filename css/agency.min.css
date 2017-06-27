@@ -179,6 +179,21 @@
    border: 1px solid #eadd61;
 }
 
+#goToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #fed136;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
    header 
    .intro-text{padding-top:100px;padding-bottom:50px}
    header .intro-text .intro-lead-in{font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic;font-size:22px;line-height:22px;margin-bottom:25px}header 
