@@ -136,7 +136,11 @@
       width: 100%;
    }
 
-   
+#search-map-btn {
+   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-size: 16px;
+}
+
 .section-subheading {
     color: inherit;
 }
@@ -179,13 +183,16 @@
    .intro-text .intro-lead-in{font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic;font-size:40px;line-height:40px;margin-bottom:25px}
    header .intro-text .intro-heading{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:75px;line-height:75px;margin-bottom:50px}}
    
-   
-   #portfolio .portfolio-item .portfolio-caption p,section h3.section-subheading{font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic}section{padding:100px 0}section h2
+   h2 {
+      font-size: 40px;
+   }
 
-   .section-heading{font-size:40px;margin-top:0;margin-bottom:15px}section h3
-   .section-subheading{font-size:12px;text-transform:none;font-weight:400;margin-bottom:75px}@media (min-width:768px){section{padding:150px 0}}
+   #portfolio .portfolio-item .portfolio-caption p,section h3.section-subheading{font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic}/*section{padding:100px 0}*/section h2
+
+   .section-heading{font-size:40px;margin-top:0;margin-bottom:8px}section h3
+   .section-subheading{font-size:12px;text-transform:none;font-weight:400;margin-bottom:75px}@media (min-width:768px){section{padding:56px 0}}
    .service-heading{margin:15px 0;text-transform:none}
-   #portfolio .portfolio-item{margin:0 0 15px;right:0}
+/*   #portfolio .portfolio-item{margin:0 0 15px;right:0}
    #portfolio .portfolio-item .portfolio-link{display:block;position:relative;max-width:400px;margin:0 auto}
    #portfolio .portfolio-item .portfolio-link .portfolio-hover{background:rgba(254,209,54,.9);position:absolute;width:100%;height:100%;opacity:0;transition:all ease .5s;-webkit-transition:all ease .5s;-moz-transition:all ease .5s}
    #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover{opacity:1}
@@ -195,7 +202,7 @@
    #portfolio .portfolio-item .portfolio-caption{max-width:400px;margin:0 auto;background-color:#fff;text-align:center;padding:25px}
    #portfolio .portfolio-item .portfolio-caption h4{text-transform:none;margin:0}
    #portfolio .portfolio-item .portfolio-caption p{font-size:16px;margin:0}footer span.copyright,footer ul.quicklinks{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif}
-   #portfolio *{z-index:2}@media (min-width:767px){#portfolio .portfolio-item{margin:0 0 30px}}.timeline{list-style:none;padding:0;position:relative}
+   #portfolio *{z-index:2}@media (min-width:767px){#portfolio .portfolio-item{margin:0 0 30px}}.timeline{list-style:none;padding:0;position:relative}*/
    .timeline:before{top:0;bottom:0;position:absolute;content:"";width:2px;background-color:#f1f1f1;left:40px;margin-left:-1.5px}
    .timeline>li{margin-bottom:50px;position:relative;min-height:50px}
    .timeline>li:after,.timeline>li:before{content:" ";display:table}
