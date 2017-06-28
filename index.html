@@ -83,7 +83,7 @@
                         <a class="page-scroll" href="#services">beer map</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">your reviews</a>
+                        <a class="page-scroll" href="#portfolio">my beers</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">about</a>
@@ -139,77 +139,130 @@
         </div>
     </section>
 
-    <!-- Your Reviews Section with 'portfolio' ids and classes-->
+    <!-- My Beers Section with 'portfolio' ids and classes-->
     <!-- Table data to be populated by user input -->
-    <section id="portfolio" class="bg-light-gray">
+    <section id="portfolio" class="gradient-color">
         <div class="container">
-            <!-- Row 1: Section heading and subheading -->
+            <!-- First row, one column -->
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Your Full Review List</h2>
-                    <h3 class="section-subheading">Beer snob: One who refuses to drink crap beer.</h3>
+                    <h2 class="section-heading">Beer Journal</h2><br><br>
                 </div>
             </div>
-            <!-- Table -->
-               <!-- Row 2: Panel title -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <p class="panel-title">Breweries Reviewed</p>
-                            </div>
-                    <div class="panel-body">
-                        <table class="table bordered form-group" id="brewery-table">
-                            <thead>
-                                <tr>
-                                    <!-- Tabel headings -->
-                                    <th>Date Visited</th>
-                                    <th>Brewery Name</th>
-                                    <th>Comments</th>
-                                </tr>
-                            </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+            <!-- Second row, one column that contains db content --> 
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="primary-panel">
+                        <div class="panel-body">
+                            <table class="table form-group" id="brewery-table">
+                                <thead>
+                                    <tr>
+                                        <!-- Tabel headings -->
+                                        <th>Date</th>
+                                        <th>Brewery</th>
+                                        <th>Beer</th>
+                                        <th>Style of Beer</th>
+                                        <th>Comments</th>
+                                    </tr>
+                                </thead>
+                            <tbody>
+                            </tbody>
+                            </table>
                     <!-- Panel body ends -->
-                    </div>  
-                <!-- Primary panel ends -->
-                </div>
-            
-            <!-- Add a brewery -->
-            <!-- Extras: Format form, Drop-down rating, Link to brewery website -->
-            <div class="panel">
-                <div class="panel-heading">
-                    <p class="panel-title">Add Brewery</p>
-                </div>
-                <div class="panel-body">
-                    <!-- Entry Form containing three element inputs -->
-                    <form id="brewery-form">
-                        <!-- First element input: Date -->
-                        <div class="field-length" class="form-group">
-                            <label for="date-input">Date</label>
-                            <input class="form-control" id="date-input" type="text">
-                        <div class="form-group">
-                            <label for="date-input">Date (DD/MM/YY)</label>
-                            <input class="form-control" id="date-input" type="number">
-                         <!-- Second element input: Brewery name -->
-                         </div><div class="form-group">
-                            <label for="brewery-name-input">Brewery Name</label>
-                            <input class="form-control" id="brewery-name-input" type="text">
-                        </div>
-                        <!-- Third element input: Comments -->
-                        <div class="form-group">
-                            <label for="comments-input">Comments</label>
-                            <textarea rows="4" class="form-control" id="comments-input" type="text">
-                            </textarea>
-                        </div>
-                        <button class="btn btn-add-data panel-heading text-primary" id="add-brewery-btn" type="submit">Save Brewery</button>
-                    </form>
+                        </div>  
+                    <!-- Primary panel ends -->
                     </div>
-            </div>
+            <!-- Third row, two columns that contain user inputs and images -->
+            <!-- Add a brewery -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="borders-input">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel-heading">
+                                        <p class="panel-title text-primary">Add Beer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <!-- First element input: Date -->
+                                    <div id="date" class="form-group">
+                                        <label for="date-input">Date</label>
+                                        <input class="form-control" id="date-input" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <!-- Second element input: Brewery name -->
+                                    <div id="brewery" class="form-group">
+                                        <label for="brewery-name-input">Brewery</label>
+                                        <input class="form-control" id="brewery-name-input" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <!-- Third element input: Beer -->
+                                    <div id="beer" class="form-group">
+                                        <label for="beer-input">Beer</label>
+                                        <input class="form-control" id="beer-input" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <!-- Fourth element input: Style of beer -->
+                                    <div id="style" class="form-group">
+                                        <label for="beer-style-input">Style of Beer</label>
+                                            <select class="form-control" id="beer-style-input">
+                                                <option>Ale</option>
+                                                <option>Belgian</option>
+                                                <option>Bock</option>
+                                                <option>Lager</option>
+                                                <option>Porter</option>
+                                                <option>Stout</option>
+                                                <option>Wheat</option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Fifth element input: Comments -->
+                                    <div id="comments" class="form-group">
+                                        <label for="comments-input">Comments</label>
+                                            <textarea rows="4" class="form-control" id="comments-input" type="text"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                 <div class="col-lg-12">
+                                    <br>
+                                    <button class="btn btn-add-data panel-heading text-primary" id="add-brewery-btn" type="submit">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="quotes">
+                                    <p class="quote">"stay with the beer. beer is continuous blood.<br>a continuous lover." <span class="author">&nbsp&nbsp&nbsp- Charles Bukowski</span></p>
+                                </div>   
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <img src="img/frank-boon-48.jpg" id="image-loop" class="img-rounded" class="img-responsive" alt="Brussels">
+                            </div>
+                        </div>
+            </container>
+            
+          
          <!-- container ends -->  
         </div> 
     </section>
+    
 
     <!-- About Section -->
     <section id="about">
