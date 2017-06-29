@@ -148,6 +148,12 @@
     color: inherit;
 }
 
+/*Sign in*/
+.email-input {
+   width: 50%;
+   margin: auto;
+}
+
 /*Journal*/
 .gradient-color {
    background: #B29226;

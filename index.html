@@ -166,6 +166,7 @@
                                         <th width="20%">Beer</th>
                                         <th width="10%">Style</th>
                                         <th width="45%">Comments</th>
+                                        </div>
                                     </tr>
                                 </thead>
                             <tbody>
@@ -460,15 +461,18 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                   <div class="wrapper">
-                                    <form class="form-signin">       
-                                        <h2 class="form-signin-heading">Please login</h2>
-                                        <input type="text" class="form-control" id="email" placeholder="EMAIL">
-                                        <input type="tel" class="form-control" id="password"   placeholder="PASSWORD" autofocus="" />  
-                                        <br>    
-                                        <button id="register" class="btn btn-lg btn-primary btn-block" type="submit">First Time? Register Here</button>
-                                        <button id="login" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-                                        <button id="logout" class="btn btn-lg btn-primary btn-block" type="submit">Sign Out</button>  
-                                    </form>
+                                    <panel-body class="form-singin-panel">
+                                        <form class="form-signin">       
+                                            <h2 class="form-signin-heading">Please login</h2>
+                                                <div class="email-input">
+                                                    <input type="text" class="form-control" id="email" placeholder="EMAIL">
+                                                    <input type="tel" class="form-control" id="password"   placeholder="PASSWORD" autofocus="" />  
+                                                    <br>    
+                                                    <button id="register" class="btn btn-lg btn-primary btn-block" type="submit">First Time? Register Here</button>
+                                                    <button id="login" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                                                    <button id="logout" class="btn btn-lg btn-primary btn-block" type="submit">Sign Out</button>  
+                                        </form>
+                                     
                                   </div>
                                 <br>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Nevermind..</button>
