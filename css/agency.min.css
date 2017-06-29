@@ -168,7 +168,6 @@
   font-size: 18px;
 }
 
-
 .form-group {
    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
    padding-top: 10px;
@@ -178,6 +177,11 @@
 #brewery-table {
    font-size: 18px;
    width: fixed;
+}
+
+table {
+    table-layout: fixed;
+    width: 300px;
 }
 
 #brewery-form {
@@ -225,9 +229,11 @@
    margin: 0 8px 0 8px;
 }
 
+
+
 #comments-input {
-   width:100%;
-   height:100px;
+   overflow:hidden;
+   text-overflow:ellipsis;
 }
 
 .btn-add-data {
@@ -240,7 +246,6 @@
 }
 
 .borders-input {
-
 }
 
 .quotes {
