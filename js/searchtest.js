@@ -9,6 +9,7 @@ var citystate;
 var citystateNoSpaces;
 var geocoder;
 var breweryDots = [];
+var addressdots;
 // var queryURL = "http://beermapping.com/webservice/loccity/1e07e953394846ca559ab1d498fb5b41/" + "newyork,ny" + "&s=json";
 // var geocode = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + citystate + '&key=AIzaSyCzv6_hzw87dgf9atP_8y6Xm82jfAjDUaA';
 
@@ -36,7 +37,7 @@ var breweryDots = [];
           method: "GET"
         })
         .done(function(response) {
-          console.log(response);
+          // console.log(response);
 
           for (var i = 0; i < response.length; i++) {
             currentBrewery = response[i];
@@ -52,13 +53,13 @@ var breweryDots = [];
             if (status === "Brewery") { 
             // console.log(currentBrewery.name);
             // console.log(address);
-            breweryDots.push(address);
-            console.log(breweryDots[i]);
+            
+            // addressdots = JSON.stringify(currentBrewery.name);
+            breweryDots.push(currentBrewery.name);
+            
+            console.log(breweryDots);
             // getDots();
-
-
-            // var addressdots(JSON.stringify(address));    
-
+               
             }       
           }
         });
@@ -70,63 +71,62 @@ var breweryDots = [];
     geocoder.geocode( { address: citystate}, function(results, status) {
       if (status == 'OK') {
         map.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location
-        });
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
       }
     });
   }
 
-//   infoWindow = new google.maps.InfoWindow();
-//   service = new google.maps.places.PlacesService(map);
-
-//   map.addListener('idle', performSearch);
+  infoWindow = new google.maps.InfoWindow();
+  service = new google.maps.places.PlacesService(map);
+  map.addListener('idle', performSearch);
 //   } 
 // }
 
-//   function performSearch() {
-//     var request = {
-//       bounds: map.getBounds(),
-//       keyword: 'brewery'
-//     };
-//     service.radarSearch(request, callback);
-//   }
+  function performSearch() {
 
-//   function callback(results, status) {
-//     if (status !== google.maps.places.PlacesServiceStatus.OK) {
-//       console.error(status);
-//       return;
-//     }
-//     for (var i = 0, result; result = results[i]; i++) {
-//     addMarker(result);
-//   }
-// }
+   for (i = 0; i < breweryDots.length; i++) {
+    var request = {
+      bounds: map.getBounds(),
+      keyword: breweryDots[i]
+    };
+  }
+    service.radarSearch(request, callback);
+  }
 
-// function addMarker(place) {
-//   var marker = new google.maps.Marker({
-//     map: map,
-//     position: place.geometry.location,
-//     icon: {
-//       url: 'https://developers.google.com/maps/documentation/javascript/images/circle.png',
-//       anchor: new google.maps.Point(10, 10),
-//       scaledSize: new google.maps.Size(10, 17)
-//     }
-//   });
+  function callback(results, status) {
+    if (status !== google.maps.places.PlacesServiceStatus.OK) {
+      console.error(status);
+      return;
+    }
+    for (var i = 0, result; result = results[i]; i++) {
+    addMarker(result);
+  }
+}
 
-//   google.maps.event.addListener(marker, 'click', function() {
-//     service.getDetails(place, function(result, status) {
-//       if (status !== google.maps.places.PlacesServiceStatus.OK) {
-//         console.error(status);
-//         return;
-//       }
-//       infoWindow.setContent(result.name);
-//       infoWindow.open(map, marker);
-//     });
-//   });
-// }
+function addMarker(place) {
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location,
+    icon: {
+      url: 'https://developers.google.com/maps/documentation/javascript/images/circle.png',
+      anchor: new google.maps.Point(10, 10),
+      scaledSize: new google.maps.Size(10, 17)
+    }
+  });
+
+
+  google.maps.event.addListener(marker, 'click', function() {
+    service.getDetails(place, function(result, status) {
+      if (status !== google.maps.places.PlacesServiceStatus.OK) {
+        console.error(status);
+        return;
+      }
+      infoWindow.setContent(result.name);
+      infoWindow.open(map, marker);
+    });
+  });
+}
 
 });
 

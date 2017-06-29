@@ -25,7 +25,7 @@ function initMap() {
 
 //On pressing search button, invoke Beer Mapping app:
 
-var queryURL = "http://beermapping.com/webservice/loccity/1e07e953394846ca559ab1d498fb5b41/" + citystate + "&s=json";
+
       $.ajax({
           url: queryURL,
           method: "GET"
@@ -69,8 +69,6 @@ function codeAddress() {
   service = new google.maps.places.PlacesService(map);
 
   map.addListener('idle', performSearch);
-    console.log(lat);
-    console.log(lng);
   } 
 }
 
