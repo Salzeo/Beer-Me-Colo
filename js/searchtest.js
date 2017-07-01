@@ -29,6 +29,9 @@ var addressdots;
  $(document).on("click", "#add-search-btn", function() {
   event.preventDefault();
 
+  breweryDots =[];
+  slicedBreweryDots = [];
+
   citystate = $("#search-input").val().trim();
   citystateNoSpaces = citystate.replace(/\s+/g, '');
   
