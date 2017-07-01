@@ -1,6 +1,6 @@
 
 var map;
-var infoWindow;
+// var infoWindow;
 var service;
 var address = {};
 var status;
@@ -63,7 +63,7 @@ var addressdots;
             
             breweryDots.push(currentBrewery.name);
 
-            slicedBreweryDots = breweryDots.slice(0,9);
+            slicedBreweryDots = breweryDots.slice(0,11);
             console.log(slicedBreweryDots);
             
             // console.log(breweryDots);
@@ -86,9 +86,15 @@ var addressdots;
     geocoder.geocode( { address: a}, function(results, status) {
       if (status == 'OK') {
         map.setCenter(results[0].geometry.location);
+        var infoWindow = new google.maps.InfoWindow();
         var marker = new google.maps.Marker({
             map: map,
-            position: results[0].geometry.location
+            position: results[0].geometry.location,
+            icon: {
+            url: 'img/beericon2.png',
+            anchor: new google.maps.Point(10, 10),
+            scaledSize: new google.maps.Size(30, 45)
+          }
         });
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
