@@ -33,7 +33,9 @@ var addressdots;
   slicedBreweryDots = [];
 
   citystate = $("#search-input").val().trim();
-  citystateNoSpaces = citystate.replace(/\s+/g, '');
+  citystateNoSpaces = citystate.replace(/,\s/, ',');
+  // var noSpaces = encodeURIComponent(citystateNoSpaces);
+  console.log(citystateNoSpaces);
   
       //AJAX call to the Beer Mapping API
       var queryURL = "http://beermapping.com/webservice/loccity/1e07e953394846ca559ab1d498fb5b41/" + citystateNoSpaces + "&s=json";
