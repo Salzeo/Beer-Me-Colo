@@ -424,7 +424,7 @@
     </section>
 
    <footer>
-   <a href="#portfolioModal2" class="btn btn-xl" data-toggle="modal">Login</a>
+   <a href="#portfolioModal2" data-toggle="modal">Legal Information</a>
    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -438,22 +438,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                  <div class="wrapper">
-
-                                    <panel-body class="form-singin-panel">
-                                        <form class="form-signin">       
-                                            <h2 class="form-signin-heading">Please login</h2>
-                                                <div class="email-input">
-                                                    <input type="text" class="form-control" id="email" placeholder="EMAIL">
-                                                    <input type="tel" class="form-control" id="password"   placeholder="PASSWORD" autofocus="" />  
-                                                    <br>    
-                                                    <button id="register" class="btn btn-lg btn-primary btn-block" type="submit">First Time? Register Here</button>
-                                                    <button id="login" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-                                                    <button id="logout" class="btn btn-lg btn-primary btn-block" type="submit">Sign Out</button>  
-                                        </form>
-                                     
-
-                                   <p>WEBSITE DISCLAIMER
+                                <p>WEBSITE DISCLAIMER
 No warranties
 
 This website is provided “as is” without any representations or warranties, express or implied.  Beer Me makes no representations or warranties in relation to this website or the information and materials provided on this website.  
@@ -499,8 +484,6 @@ Other parties
 Unenforceable provisions
 
 If any provision of this website disclaimer is, or is found to be, unenforceable under applicable law, that will not affect the enforceability of the other provisions of this website disclaimer.</p>
->>>>>>> fe7dedd028bc5f85c211025fb1563a61d7c72c85
-                                  </div>
                                 <br>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Nevermind..</button>
                             </div>
@@ -512,10 +495,7 @@ If any provision of this website disclaimer is, or is found to be, unenforceable
     </div>
     </footer>
 
-    <!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-    <!-- Portfolio Modal 1 -->
+    <!-- Login Modal -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -533,7 +513,7 @@ If any provision of this website disclaimer is, or is found to be, unenforceable
                                     <form class="form-signin">       
                                         <h2 class="form-signin-heading">Please login</h2>
                                         <input type="text" class="form-control" id="email" placeholder="EMAIL">
-                                        <input type="tel" class="form-control" id="password"   placeholder="PASSWORD" autofocus="" />  
+                                        <input type="password" class="form-control" id="password"   placeholder="PASSWORD">  
                                         <br>    
                                         <button id="register" class="btn btn-lg btn-primary btn-block" type="submit">First Time? Register Here</button>
                                         <button id="login" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
@@ -565,6 +545,8 @@ If any provision of this website disclaimer is, or is found to be, unenforceable
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+
+    <script src="js/firebase.js"></script>
 
     <script src="js/searchtest.js"></script>
 
