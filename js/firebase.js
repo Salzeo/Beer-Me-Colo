@@ -50,6 +50,7 @@ database.ref().on("child_added", function(childSnapshot) {
     // Handle the errors
     }, function(errorObject) {
       console.log("Errors handled: " + errorObject.code);
+      $("#review-error").html(errorObject.code);
     });
 
 //AUTHENTICATION
@@ -62,18 +63,21 @@ $(document).on("click", "#login", function(event) {
    var password = $("#password").val();
 
    if (!email || !password) {
+    $("#error").html("Email and Password Required");
     return console.log("Email and Password Required");
    }
 
    firebase.auth().signInWithEmailAndPassword(email, password)
    .then(function (user) {
-    location.href = './index.html';
+    // location.href = './index.html';
   })
    .catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log("signIn error", error);
+      $("#error").html(error.message);
    });
+   console.log("hello");
     $("#show-user").html(email);
     $("#email").val("");
     $("#password").val("");
@@ -93,12 +97,13 @@ $(document).on("click", "#register", function(event) {
         id: user.uid
      }
      ref.set(newUser);
-     location.href = './index.html';
+     // location.href = './index.html';
    })
    .catch(function(error) {
       console.log("register error" + error);
+      $("#error").html(error.message);
     });
-    $("#show-user").html(newUser.email);
+    $("#show-user").html(email);
     $("#email").val("");
     $("#password").val("");
 });
@@ -142,21 +147,3 @@ auth.onAuthStateChanged(function(user) {
 // ref.once("value", function(data) {
 //   // do some stuff once, user data will be in the variable data
 // });
-
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-        document.getElementById("goToTop").style.display = "block";
-    } else {
-        document.getElementById("goToTop").style.display = "none";
-    }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
