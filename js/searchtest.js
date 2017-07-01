@@ -88,6 +88,7 @@ var addressdots;
         map.setCenter(results[0].geometry.location);
         var infoWindow = new google.maps.InfoWindow();
         var marker = new google.maps.Marker({
+            animation: google.maps.Animation.DROP,
             map: map,
             position: results[0].geometry.location,
             icon: {
