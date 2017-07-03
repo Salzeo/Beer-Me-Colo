@@ -25,7 +25,8 @@ var config = {
             reviewData.style = $("#beer-style-input").val().trim();
             reviewData.beer = $("#beer-input").val().trim();
             
-            database.ref().push(reviewData);
+            database.ref("Tony").push(reviewData);
+
       });
 
 database.ref().on("child_added", function(childSnapshot) {
@@ -70,6 +71,7 @@ $(document).on("click", "#login", function(event) {
    firebase.auth().signInWithEmailAndPassword(email, password)
    .then(function (user) {
     // location.href = './index.html';
+    console.log("signed in");
   })
    .catch(function(error) {
       var errorCode = error.code;
@@ -77,7 +79,7 @@ $(document).on("click", "#login", function(event) {
       console.log("signIn error", error);
       $("#error").html(error.message);
    });
-   console.log("hello");
+   
     $("#show-user").html(email);
     $("#email").val("");
     $("#password").val("");
