@@ -139,10 +139,10 @@
       width: 100%;
    }
 
-  #search-map-btn {
-      font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
-      font-size: 16px;
-   }
+.intro-heading {
+   font-size: 113px !important;
+   letter-spacing: 6px;
+}
 
 .section-subheading {
     color: inherit;
@@ -153,6 +153,22 @@
    width: 50%;
    margin: auto;
 }
+
+/*Map*/
+#map {
+      height: 400px;
+      width: 100%;
+}
+
+#search-map-btn {
+      font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+      font-size: 16px;
+   }
+
+.map-page-color {
+   background: #DDD5D6;
+}
+
 
 /*Journal*/
 .gradient-color {
@@ -290,8 +306,6 @@ table {
   border-radius: 10px;
 }
 
-
-
    header 
    .intro-text{padding-top:100px;padding-bottom:50px}
    header .intro-text .intro-lead-in{font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic;font-size:22px;line-height:22px;margin-bottom:25px}header 
@@ -382,7 +396,4 @@ table {
    .portfolio-modal .close-modal .lr{height:75px;width:1px;margin-left:35px;background-color:#222;transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);z-index:1051}
    .portfolio-modal .close-modal .lr .rl{height:75px;width:1px;background-color:#222;transform:rotate(90deg);-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);z-index:1052}
    .portfolio-modal .modal-backdrop{opacity:0;display:none}::-moz-selection{text-shadow:none;background:#fed136}::selection{text-shadow:none;background:#fed136}img::selection{background:0 0}img::-moz-selection{background:0 0}
-   #map {
-      height: 400px;
-      width: 100%;
-   }
+   
