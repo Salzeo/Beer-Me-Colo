@@ -23,7 +23,7 @@
    .large{font-size:16px}a,a.active,a:active,a:focus,a:hover{outline:0}a
    .active,a:active,a:focus,a:hover{color:#fec503}
    .img-centered{margin:0 auto}
-   .bg-light-gray{background-color:#eee}
+   .bg-light-gray{background-color:#ddd5d6}
    .bg-darkest-gray{background-color:#222}
    .btn-primary{color:#fff;background-color:#fed136;border-color:#fed136}
    .btn-primary.active,
@@ -139,10 +139,10 @@
       width: 100%;
    }
 
-  #search-map-btn {
-      font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
-      font-size: 16px;
-   }
+.intro-heading {
+   font-size: 113px !important;
+   letter-spacing: 6px;
+}
 
 .section-subheading {
     color: inherit;
@@ -153,6 +153,22 @@
    width: 50%;
    margin: auto;
 }
+
+/*Map*/
+#map {
+      height: 400px;
+      width: 100%;
+}
+
+#search-map-btn {
+      font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+      font-size: 16px;
+   }
+
+.map-page-color {
+   background: #DDD5D6;
+}
+
 
 /*Journal*/
 .gradient-color {
@@ -214,6 +230,7 @@ table {
 
 #brewery-name-input {
    width: 100%;
+   font-style: ;
 }
 
 #beer {
@@ -271,7 +288,6 @@ table {
    margin-left: 65px;
    height: 325px;
    width: 425px;
-   
 }
 /*Journal ends*/
 
@@ -289,8 +305,6 @@ table {
   padding: 10px;
   border-radius: 10px;
 }
-
-
 
    header 
    .intro-text{padding-top:100px;padding-bottom:50px}
@@ -359,10 +373,10 @@ table {
    section#contact .form-group input.form-control{height:auto}
    section#contact .form-group textarea.form-control{height:236px}
    section#contact .form-control:focus{border-color:#fed136;box-shadow:none}
-   section#contact ::-webkit-input-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#eee}
-   section#contact :-moz-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#eee}
-   section#contact ::-moz-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#eee}
-   section#contact :-ms-input-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#eee}
+   section#contact ::-webkit-input-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#ddd5d6}
+   section#contact :-moz-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#ddd5d6}
+   section#contact ::-moz-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#ddd5d6}
+   section#contact :-ms-input-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#ddd5d6}
    section#contact .text-danger{color:#e74c3c}footer{padding:25px 0;text-align:center}
    footer span.copyright{line-height:40px;text-transform:uppercase;text-transform:none}
    footer ul.quicklinks{margin-bottom:0;line-height:40px;text-transform:uppercase;text-transform:none}
@@ -382,7 +396,4 @@ table {
    .portfolio-modal .close-modal .lr{height:75px;width:1px;margin-left:35px;background-color:#222;transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);z-index:1051}
    .portfolio-modal .close-modal .lr .rl{height:75px;width:1px;background-color:#222;transform:rotate(90deg);-ms-transform:rotate(90deg);-webkit-transform:rotate(90deg);z-index:1052}
    .portfolio-modal .modal-backdrop{opacity:0;display:none}::-moz-selection{text-shadow:none;background:#fed136}::selection{text-shadow:none;background:#fed136}img::selection{background:0 0}img::-moz-selection{background:0 0}
-   #map {
-      height: 400px;
-      width: 100%;
-   }
+   

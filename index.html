@@ -43,7 +43,8 @@
 
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
-    <!-- <link ref="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/readable/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/animate.css">
+   
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -70,7 +71,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><img src="img/logos/home2.jpg" alt="home" width="35" height="25" align="left"><span id="show-user"></span></a>
+                <a class="navbar-brand page-scroll" href="#page-top">Home<span id="show-user"></span></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -103,7 +104,8 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome to:</div>
-                <div class="intro-heading">Beer Me</div>
+
+                <div class="intro-heading animated zoomIn">Beer Me</div>
                 <a href="#portfolioModal1" class="btn btn-xl" data-toggle="modal">Login</a>
                 <a href="#services" class="page-scroll btn btn-xl">Find Beer Now!</a>
             </div>
@@ -111,7 +113,7 @@
     </header>
 
     <!-- Beer Map Section -->
-    <section id="services">
+    <section id="services" class="map-page-color">
         <div class="container">
             <!-- <div class="row">
                 <div class="col-lg-12 text-center">
@@ -122,14 +124,13 @@
 
             <form id="map-form">
                 <div class="form-group">
-                    <label for="search-input">City, State</label>
+                    <label for="search-input">City or Town</label>
                     <input class="form-control" id="search-input" type="text">
                 </div>
                 <!-- Submit button -->
                 <button class="btn btn-add-data panel-heading text-primary" id="add-search-btn" type="submit">Search</button>
             </form>
-
-
+            <br>
             <div class="row">
                 <div id="form" class="col-lg-4">
                 </div>
@@ -150,9 +151,6 @@
                 </div>
             </div>
             <!-- Second row, one column that contains db content --> 
-            
-            
-
             <div class="row">
                 <div class="col-lg-12">
                     <div class="primary-panel">
@@ -194,7 +192,7 @@
                                     <!-- First element input: Date -->
                                     <div id="date" class="form-group">
                                         <label for="date-input">Date</label>
-                                        <input class="form-control" id="date-input" type="text">
+                                        <input class="form-control" id="date-input" type="date">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -215,7 +213,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <!-- Fourth element input: Style of beer -->
-                                    <div id="style" class="form-group">
+                                    <div id="style" class="form-group"> 
                                         <label for="beer-style-input">Style of Beer</label>
                                             <select class="form-control" id="beer-style-input">
                                                 <option>Ale</option>
@@ -425,6 +423,7 @@
     </section>
 
    <footer>
+   <a href="#portfolioModal3" data-toggle="modal">Disclaimer&nbsp&nbsp&nbsp</a>
    <a href="#portfolioModal2" data-toggle="modal">Legal Information</a>
    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -507,6 +506,7 @@ If any provision of this website disclaimer is, or is found to be, unenforceable
                     </div>
                 </div>
                 <div class="container">
+
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
