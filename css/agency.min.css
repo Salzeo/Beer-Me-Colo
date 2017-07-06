@@ -214,6 +214,7 @@ table {
 
 #brewery-name-input {
    width: 100%;
+   font-style: ;
 }
 
 #beer {
@@ -271,7 +272,6 @@ table {
    margin-left: 65px;
    height: 325px;
    width: 425px;
-   
 }
 /*Journal ends*/
 
