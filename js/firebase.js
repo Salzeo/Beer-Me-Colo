@@ -12,10 +12,17 @@ var config = {
 
     var auth = firebase.auth();
 
+    var userId;
     var reviewData = {};
    
    $(document).on("click", "#add-brewery-btn", function(event) {
-    console.log("test");
+    // console.log("test", userId);
+
+          if (!userId) {
+        $("#review-error").html("Please sign in first")
+        return
+      }
+
 
             event.preventDefault();
 
@@ -25,39 +32,37 @@ var config = {
             reviewData.style = $("#beer-style-input").val().trim();
             reviewData.beer = $("#beer-input").val().trim();
             
-            database.ref("Tony").push(reviewData);
-
+            database.ref("users/" + userId).push(reviewData);
       });
 
-database.ref().on("child_added", function(childSnapshot) {
-      // Log everything that's coming out of snapshot
-      // console.log(childSnapshot.val().name);
-      // console.log(childSnapshot.val().comment);
-      // console.log(childSnapshot.val().date);
+// database.ref("users/" + userId).on("child_added", function(childSnapshot) {
+//       // Log everything that's coming out of snapshot
+//       // console.log(childSnapshot.val().name);
+//       // console.log(childSnapshot.val().comment);
+//       // console.log(childSnapshot.val().date);
 
-      var reviewData = childSnapshot.val();
+//       var reviewData = childSnapshot.val();
 
-      // full list of items to the well
-        $("#brewery-table > tbody").append("<tr><td>" + reviewData.date + "</td><td>" + reviewData.name + "</td><td>" + reviewData.beer +"</td><td>" + reviewData.style + "</td><td>" +
-          reviewData.comment + "</td></tr>");
+//       // full list of items to the well
+//         $("#brewery-table > tbody").append("<tr><td>" + reviewData.date + "</td><td>" + reviewData.name + "</td><td>" + reviewData.beer +"</td><td>" + reviewData.style + "</td><td>" +
+//           reviewData.comment + "</td></tr>");
 
-      // empty form after submit
-      $("#brewery-name-input").val("");
-      $("#date-input").val("");
-      $("#comments-input").val("");
-      $("#beer-input").val("");
-      $("#beer-style-input").val("");
+//       // empty form after submit
+//       $("#brewery-name-input").val("");
+//       $("#date-input").val("");
+//       $("#comments-input").val("");
+//       $("#beer-input").val("");
+//       $("#beer-style-input").val("");
 
-    // Handle the errors
-    }, function(errorObject) {
-      console.log("Errors handled: " + errorObject.code);
-      $("#review-error").html(errorObject.code);
-    });
+//     // Handle the errors
+//     }, function(errorObject) {
+//       console.log("Errors handled: " + errorObject.code);
+//       $("#review-error").html(errorObject.code);
+//     });
 
 //AUTHENTICATION
 //sign in
 $(document).on("click", "#login", function(event) {
-
   event.preventDefault();
 
    var email = $("#email").val();
@@ -70,15 +75,14 @@ $(document).on("click", "#login", function(event) {
 
    firebase.auth().signInWithEmailAndPassword(email, password)
    .then(function (user) {
+    userId = user.uid;
     // location.href = './index.html';
     console.log("signed in");
-  })
-   .catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log("signIn error", error);
-      $("#error").html(error.message);
-   });
+    $("#error").html("Success! You're logged in as " + email)
+
+    stateChange();
+    addData();
+
    
     $("#show-user").html(email);
     $("#email").val("");
@@ -87,18 +91,25 @@ $(document).on("click", "#login", function(event) {
 
 //Register
 $(document).on("click", "#register", function(event) {
-    event.preventDefault();
+  event.preventDefault();
    var email = $("#email").val();
    var password = $("#password").val();
    console.log(email, password);
   auth.createUserWithEmailAndPassword(email, password)
    .then(function (user) {
+    userId = user.uid; 
      var ref = database.ref("users/" + user.uid);
      var newUser = {
         email:user.email,
         id: user.uid
      }
      ref.set(newUser);
+
+     stateChange();
+     addData();
+
+     $("#error").html("Success! You're registered as " + email)
+     
      // location.href = './index.html';
    })
    .catch(function(error) {
@@ -116,16 +127,62 @@ $(document).on("click", "#logout", function(event) {
 });
 
 //auth state change
+function stateChange() {
 auth.onAuthStateChanged(function(user) {
   if (user) {
     var ref = database.ref('users/' + user.uid);
     ref.on('child_added', function (snap) {
-      console.log(snap.val());
+      // console.log(snap.val());
     });
   } else{
     console.log("No user signed in");
   }
 });
+}
+
+function addData() {
+database.ref("users/" + userId).on("child_added", function(childSnapshot) {
+
+      var reviewData = childSnapshot.val();
+
+      if (typeof reviewData === "object") {
+        // full list of items to the well
+        $("#brewery-table > tbody").append("<tr><td>" + reviewData.date + "</td><td>" + reviewData.name + "</td><td>" + reviewData.beer +"</td><td>" + reviewData.style + "</td><td>" +
+          reviewData.comment + "</td></tr>");
+
+      // empty form after submit
+      $("#brewery-name-input").val("");
+      $("#date-input").val("");
+      $("#comments-input").val("");
+      $("#beer-input").val("");
+      $("#beer-style-input").val("");
+      }
+
+    // Handle the errors
+    }, function(errorObject) {
+      console.log("Errors handled: " + errorObject.code);
+      $("#review-error").html(errorObject.code);
+    });
+ }
+});
+
+
+// At users/
+// {
+//   email: "tony@gmail.com",
+//   beers: [
+//     {
+//       beer: "big beer"
+//       comment: "good beer"
+//       date: "6/5/17"
+//       name: "wynkoop"
+//       style: "Belgian"
+//     }
+//   ]
+// }
+
+
+
 
 //LINK USER DATA WITH CURRENT USER
 //Get the firebase reference    
