@@ -23,7 +23,7 @@
    .large{font-size:16px}a,a.active,a:active,a:focus,a:hover{outline:0}a
    .active,a:active,a:focus,a:hover{color:#fec503}
    .img-centered{margin:0 auto}
-   .bg-light-gray{background-color:#eee}
+   .bg-light-gray{background-color:#ddd5d6}
    .bg-darkest-gray{background-color:#222}
    .btn-primary{color:#fff;background-color:#fed136;border-color:#fed136}
    .btn-primary.active,
@@ -360,9 +360,9 @@ table {
    section#contact .form-group textarea.form-control{height:236px}
    section#contact .form-control:focus{border-color:#fed136;box-shadow:none}
    section#contact ::-webkit-input-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#ddd5d6}
-   section#contact :-moz-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#eee}
-   section#contact ::-moz-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#eee}
-   section#contact :-ms-input-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#eee}
+   section#contact :-moz-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#ddd5d6}
+   section#contact ::-moz-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#ddd5d6}
+   section#contact :-ms-input-placeholder{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;color:#ddd5d6}
    section#contact .text-danger{color:#e74c3c}footer{padding:25px 0;text-align:center}
    footer span.copyright{line-height:40px;text-transform:uppercase;text-transform:none}
    footer ul.quicklinks{margin-bottom:0;line-height:40px;text-transform:uppercase;text-transform:none}
