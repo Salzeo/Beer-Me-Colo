@@ -144,6 +144,11 @@
    letter-spacing: 6px;
 }
 
+#show-user {
+      color: white !important;
+      /*font-size: 18px !important;*/
+}
+
 .section-subheading {
     color: inherit;
 }
