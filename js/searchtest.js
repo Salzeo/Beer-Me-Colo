@@ -1,7 +1,5 @@
 
 var map;
-var service;
-var address = {};
 var status;
 var currentBrewery;
 var citystate;
@@ -84,6 +82,7 @@ var marker;
       });
     }
 
+    //Drop the pins on the map in their respective locations
     function createMarker(a, lat, lng) {
         marker = new google.maps.Marker({
         animation: google.maps.Animation.DROP,
@@ -96,6 +95,7 @@ var marker;
           }
         });
 
+      //Display the brewery name when clicking on the pin
       var infoWindow = new google.maps.InfoWindow({
 
       });
