@@ -1,6 +1,5 @@
 
 var map;
-// var infoWindow;
 var service;
 var address = {};
 var status;
@@ -10,7 +9,7 @@ var citystateNoSpaces;
 var geocoder;
 var breweryDots = [];
 var slicedBreweryDots = [];
-var addressdots;
+var marker;
 
 
 //Center the map over Denver
@@ -18,7 +17,7 @@ var addressdots;
     geocoder = new google.maps.Geocoder();
     var latlng = new google.maps.LatLng(39.7538126, -104.9907165);
     var mapOptions = {
-      zoom: 8,
+      zoom: 9,
       center: latlng
     }
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
@@ -34,8 +33,6 @@ var addressdots;
 
   citystate = $("#search-input").val().trim();
   citystateNoSpaces = citystate.replace(/,\s/, ',');
-  // var noSpaces = encodeURIComponent(citystateNoSpaces);
-  console.log(citystateNoSpaces);
   
       //AJAX call to the Beer Mapping API
       var queryURL = "http://beermapping.com/webservice/loccity/1e07e953394846ca559ab1d498fb5b41/" + citystateNoSpaces + "&s=json";
@@ -49,24 +46,14 @@ var addressdots;
           //Loop through responses and return address infomration of breweries-- may just need name
           for (var i = 0; i < response.length; i++) {
             currentBrewery = response[i];
-            // address = {
-            //   // name: currentBrewery.name,
-            //   street: currentBrewery.street,
-            //   city: currentBrewery.city,
-            //   state: currentBrewery.state,
-            //   zip: currentBrewery.zip,
-            //     }
+
             status = currentBrewery.status;
 
             if (status === "Brewery") { 
-            // console.log(address);
             
             breweryDots.push(currentBrewery.name);
 
-            slicedBreweryDots = breweryDots.slice(0,11);
-            console.log(slicedBreweryDots);
-            
-            // console.log(breweryDots);
+            slicedBreweryDots = breweryDots.slice(0,10);
                
             }       
           }
@@ -86,26 +73,38 @@ var addressdots;
     geocoder.geocode( { address: a}, function(results, status) {
       if (status == 'OK') {
         map.setCenter(results[0].geometry.location);
-        var infoWindow = new google.maps.InfoWindow();
-        var marker = new google.maps.Marker({
-            animation: google.maps.Animation.DROP,
-            map: map,
-            position: results[0].geometry.location,
-            icon: {
-            url: 'img/beericon2.png',
-            anchor: new google.maps.Point(10, 10),
-            scaledSize: new google.maps.Size(30, 45)
-          }
-        });
+        var p = results[0].geometry.location;
+        var lat = p.lat();
+        var lng = p.lng();
+        createMarker(a,lat,lng);
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
           }
       });
     }
 
+    function createMarker(a, lat, lng) {
+        marker = new google.maps.Marker({
+        animation: google.maps.Animation.DROP,
+        position: new google.maps.LatLng(lat,lng),
+        map: map,
+        icon: {
+          url: 'img/beericon2.png',
+          anchor: new google.maps.Point(10, 10),
+          scaledSize: new google.maps.Size(30, 45)
+          }
+        });
+
+      var infoWindow = new google.maps.InfoWindow({
+
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+      infoWindow.setContent(a);
+      infoWindow.open(map, this);
+      });
+
+    }
+
 });
-
-  
-
 
 
