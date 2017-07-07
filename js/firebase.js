@@ -90,7 +90,8 @@ $(document).on("click", "#login", function(event) {
 });
 
 //Register
-$(document).on("click", "#register", function(event) {
+$("#register").on("click", function(event){
+// $(document).on("click", "#register", function(event) {
   event.preventDefault();
    var email = $("#email").val();
    var password = $("#password").val();
