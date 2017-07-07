@@ -18,7 +18,8 @@ var marker;
     var latlng = new google.maps.LatLng(39.7538126, -104.9907165);
     var mapOptions = {
       zoom: 9,
-      center: latlng
+      center: latlng,
+      scrollwheel: false
     }
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
   }
