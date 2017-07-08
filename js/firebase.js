@@ -62,7 +62,8 @@ var config = {
 
 //AUTHENTICATION
 //sign in
-$(document).on("click", "#login", function(event) {
+$("#loginModal").on("click", "#login", function(event) {
+  alert("again");
   event.preventDefault();
 
    var email = $("#email").val();

@@ -42,6 +42,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Theme CSS -->
+    <link href="./vendor/jquery/jquery-ui.min.css" rel="stylesheet">
+     <link href="./vendor/jquery/jquery-ui.theme.min.css" rel="stylesheet">
     <link href="css/agency.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
    
@@ -111,7 +113,7 @@
                 <div class="intro-lead-in">Welcome to:</div>
 
                 <div class="intro-heading animated zoomIn">Beer Me</div>
-                <a href="#portfolioModal1" class="btn btn-xl" data-toggle="modal">Login</a>
+                <button id="loginModalbutton" class="btn btn-xl">Login</button>
                 <button id="logout" class="btn btn-xl">Sign Out</button>
                 <a href="#services" class="page-scroll btn btn-xl">Find Beer Now!</a>
             </div>
@@ -501,6 +503,19 @@ If any provision of this website disclaimer is, or is found to be, unenforceable
     </footer>
 
     <!-- Login Modal -->
+    <div id="loginModal">
+    <h2 class="form-signin-heading">Please login</h2>
+                                        <div id="error"></div>
+                                        <input type="text" class="form-control" id="email" placeholder="EMAIL">
+                                        <input type="password" class="form-control" id="password"   placeholder="PASSWORD">  
+                                        <br>    
+                                        <button id="register" class="btn btn-lg btn-primary btn-block">First Time? Register Here</button>
+                                        <button id="login" class="btn btn-lg btn-primary btn-block">Login</button>  
+                                  </div>
+                                <br>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Nevermind..</button>
+        
+    </div>
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -537,6 +552,8 @@ If any provision of this website disclaimer is, or is found to be, unenforceable
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery-ui.min.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

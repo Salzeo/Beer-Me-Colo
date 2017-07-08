@@ -3,6 +3,7 @@
  
  $(document).ready(function){
     $("#dialog").dialog();
+    
     <script>
     $( "#toggle" ).click(function() {
     $( "#elem" ).animate({
@@ -10,12 +11,12 @@
     backgroundColor: "rgb( 20, 20, 20 )"
   });
 });
-</script>
+    </script>
     <script>
-$( "#toggle" ).click(function() {
-  $( "#elem" ).animate({
-    color: "green",
-    backgroundColor: "rgb( 20, 20, 20 )"
+        $( "#toggle" ).click(function() {
+        $( "#elem" ).animate({
+        color: "green",
+        backgroundColor: "rgb( 20, 20, 20 )"
   });
 });
 </script>
