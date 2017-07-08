@@ -34,7 +34,7 @@ var marker;
   citystateNoSpaces = citystate.replace(/,\s/, ',');
   
       //AJAX call to the Beer Mapping API
-      var queryURL = "http://beermapping.com/webservice/loccity/1e07e953394846ca559ab1d498fb5b41/" + citystateNoSpaces + "&s=json";
+      var queryURL = "https://beermapping.com/webservice/loccity/1e07e953394846ca559ab1d498fb5b41/" + citystateNoSpaces + "&s=json";
         $.ajax({
           url: queryURL,
           method: "GET"
