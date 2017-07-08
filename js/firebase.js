@@ -63,12 +63,12 @@ var config = {
 //AUTHENTICATION
 //sign in
 $("#loginModal").on("click", "#login", function(event) {
-  alert("again");
+
   event.preventDefault();
 
    var email = $("#email").val();
    var password = $("#password").val();
-
+console.log(email, password);
    if (!email || !password) {
      $("#error").html("Email and Password Required");
       return console.log("Email and Password Required");
@@ -79,7 +79,7 @@ $("#loginModal").on("click", "#login", function(event) {
       userId = user.uid;
     // location.href = './index.html';
       console.log("signed in");
-      $("#error").html("Success! You're logged in as " + email)
+      //$("#error").html("Success! You're logged in as " + email)
 
     stateChange();
     addData();
@@ -87,12 +87,16 @@ $("#loginModal").on("click", "#login", function(event) {
     $("#show-user").html(email);
     $("#email").val("");
     $("#password").val("");
-  });
+    $("#loginModal").dialog("close");
+  }).catch(function(error) {
+      console.log("register error" + error);
+      $("#error").html(error.message);
+    });
 });
 
 //Register
 // $("#register").on("click", function(event){
-$(document).on("click", "#register", function(event) {
+$("#loginModal").on("click", "#register", function(event) {
      event.preventDefault();
    
     var email = $("#email").val();
@@ -111,8 +115,8 @@ $(document).on("click", "#register", function(event) {
 
      stateChange();
      addData();
-
-     $("#error").html("Success! You're registered as " + email)
+$("#loginModal").dialog("close");
+     //$("#error").html("Success! You're registered as " + email)
      
      // location.href = './index.html';
    })
