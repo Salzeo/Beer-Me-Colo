@@ -69,42 +69,44 @@ $(document).on("click", "#login", function(event) {
    var password = $("#password").val();
 
    if (!email || !password) {
-    $("#error").html("Email and Password Required");
-    return console.log("Email and Password Required");
-   }
+     $("#error").html("Email and Password Required");
+      return console.log("Email and Password Required");
+      }
 
-   firebase.auth().signInWithEmailAndPassword(email, password)
-   .then(function (user) {
-    userId = user.uid;
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(function (user) {
+      userId = user.uid;
     // location.href = './index.html';
-    console.log("signed in");
-    $("#error").html("Success! You're logged in as " + email)
+      console.log("signed in");
+      $("#error").html("Success! You're logged in as " + email)
 
     stateChange();
     addData();
 
-   
     $("#show-user").html(email);
     $("#email").val("");
     $("#password").val("");
+  });
 });
 
 //Register
-$("#register").on("click", function(event){
-// $(document).on("click", "#register", function(event) {
-  event.preventDefault();
-   var email = $("#email").val();
-   var password = $("#password").val();
-   console.log(email, password);
-  auth.createUserWithEmailAndPassword(email, password)
+// $("#register").on("click", function(event){
+$(document).on("click", "#register", function(event) {
+     event.preventDefault();
+   
+    var email = $("#email").val();
+    var password = $("#password").val();
+    console.log(email, password);
+
+    auth.createUserWithEmailAndPassword(email, password)
    .then(function (user) {
-    userId = user.uid; 
-     var ref = database.ref("users/" + user.uid);
-     var newUser = {
-        email:user.email,
-        id: user.uid
-     }
-     ref.set(newUser);
+      userId = user.uid; 
+       var ref = database.ref("users/" + user.uid);
+       var newUser = {
+          email:user.email,
+          id: user.uid
+          }
+        ref.set(newUser);
 
      stateChange();
      addData();
@@ -117,9 +119,9 @@ $("#register").on("click", function(event){
       console.log("register error" + error);
       $("#error").html(error.message);
     });
-    $("#show-user").html(email);
-    $("#email").val("");
-    $("#password").val("");
+      $("#show-user").html(email);
+      $("#email").val("");
+      $("#password").val("");
 });
 
 //Sign Out
@@ -129,20 +131,20 @@ $(document).on("click", "#logout", function(event) {
 
 //auth state change
 function stateChange() {
-auth.onAuthStateChanged(function(user) {
-  if (user) {
-    var ref = database.ref('users/' + user.uid);
-    ref.on('child_added', function (snap) {
-      // console.log(snap.val());
-    });
-  } else{
-    console.log("No user signed in");
-  }
-});
-}
+  auth.onAuthStateChanged(function(user) {
+    if (user) {
+      var ref = database.ref('users/' + user.uid);
+      ref.on('child_added', function (snap) {
+        // console.log(snap.val());
+      });
+    } else{
+      console.log("No user signed in");
+    }
+  });
+};
 
 function addData() {
-database.ref("users/" + userId).on("child_added", function(childSnapshot) {
+    database.ref("users/" + userId).on("child_added", function(childSnapshot) {
 
       var reviewData = childSnapshot.val();
 
@@ -151,21 +153,22 @@ database.ref("users/" + userId).on("child_added", function(childSnapshot) {
         $("#brewery-table > tbody").append("<tr><td>" + reviewData.date + "</td><td>" + reviewData.name + "</td><td>" + reviewData.beer +"</td><td>" + reviewData.style + "</td><td>" +
           reviewData.comment + "</td></tr>");
 
-      // empty form after submit
-      $("#brewery-name-input").val("");
-      $("#date-input").val("");
-      $("#comments-input").val("");
-      $("#beer-input").val("");
-      $("#beer-style-input").val("");
+         // empty form after submit
+        $("#brewery-name-input").val("");
+        $("#date-input").val("");
+        $("#comments-input").val("");
+        $("#beer-input").val("");
+        $("#beer-style-input").val("");
       }
 
     // Handle the errors
-    }, function(errorObject) {
-      console.log("Errors handled: " + errorObject.code);
-      $("#review-error").html(errorObject.code);
-    });
- }
-});
+      }, function(errorObject) {
+        console.log("Errors handled: " + errorObject.code);
+        $("#review-error").html(errorObject.code);
+        });
+    };
+
+
 
 
 // At users/
